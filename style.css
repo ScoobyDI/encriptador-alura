@@ -40,6 +40,10 @@ section {
     border: transparent;
 }
 
+.alert {
+    display: inline-block;
+}
+
 aside {
     width: 25%;
     display: flex;
