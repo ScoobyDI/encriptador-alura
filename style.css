@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    background-color: #F3F5FC;
+    display: flex;
+}
+
+section {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#texto::placeholder {
+    color:#0A3871;
+    
+}
+
+#texto:focus {
+    outline: 0;
+}
+   
+#texto {
+    width: 600px;
+    height: 600px;
+    font-size: 32px;
+    background-color: transparent;
+    color: #0A3871;
+    border: transparent;
+}
+
+aside {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin: 40px 40px 40px 0;
+    border-radius: 40px;
+    box-shadow: 10px 10px 5px -6px rgba(194,194,194,1);
+}
+
+.imgNoText {
+    display: flex;
+    justify-content: center;
+}
+
+.mensaje-Encriptador {
+    margin: 30px;
+    text-align: center;
+}
+
+h2 {
+    color: #343A40;
+}
+
+p{
+    color: #495057;
+}
+
+.botones{
+    width: 600px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.boton {
+    font-size: 16px;
+    color: white;
+    background-color: #0A3871;
+    width: 250px;
+    padding: 14px 10px;
+    border-radius: 16px;
+    margin-top: 20px;
+}
