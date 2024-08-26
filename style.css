@@ -40,7 +40,12 @@ section {
     border: transparent;
 }
 
-.alert {
+.contenedor-alert {
+    display: flex;
+    align-items: center;
+}
+
+.alertText {
     display: inline-block;
 }
 
