@@ -11,6 +11,7 @@ const textArea = document.getElementById("texto");
 const imgMunieco = document.getElementById("imgNoText");
 const titleResult = document.querySelector(".titleMsj");
 const textResult = document.querySelector("#textoMsj");
+const btnCopiar = document.querySelector("#btnCopiar");
 
 function encriptar (mensaje){                    //Función para encriptar
     let mensajeEncriptado = "";
@@ -44,17 +45,19 @@ document.getElementById("texto").addEventListener("input", (e) => {
 });
 
 function encriptarTexto() {
-    const text = textArea.value;
+    let text = textArea.value.toLowerCase();
     console.log("Valor del textarea antes de encriptar:", text); // Muestra el valor antes de encriptar
-    const mensajeEncriptado = encriptar(text);
-    console.log("Mensaje encriptado:", mensajeEncriptado);
+    let mensajeEncriptado = encriptar(text);
+    textResult.textContent = mensajeEncriptado;
+    titleResult.classList.add("hidden");
 }
 
 function desencriptarTexto() {
-    const text = textArea.value;
+    let text = textArea.value.toLowerCase();
     console.log("Valor del textarea antes de desencriptar:", text); // Muestra el valor antes de desencriptar
-    const mensajeDesencriptado = desencriptar(text);
-    console.log("Mensaje desencriptado:", mensajeDesencriptado);
+    let mensajeDesencriptado = desencriptar(text);
+    textResult.textContent = mensajeDesencriptado;
+    titleResult.classList.add("hidden");
 }
 
 

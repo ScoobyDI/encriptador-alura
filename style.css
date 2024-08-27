@@ -80,6 +80,21 @@ p{
     color: #495057;
 }
 
+.contenedor-copiar {
+    display: flex;
+    justify-content: center;
+    align-content: flex-end;
+}
+
+#btnCopiar {
+    background-color: gray;
+    color: #0A3871;
+}
+
+.hidden {
+    display: none;
+}
+
 .contenedor-botones{
     width: 600px;
     display: flex;
@@ -106,3 +121,4 @@ p{
     color: #0A3871;
     border: 10px;
 }
+
