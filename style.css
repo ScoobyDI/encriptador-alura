@@ -87,8 +87,9 @@ p{
 }
 
 #btnCopiar {
-    background-color: gray;
+    background-color: transparent;
     color: #0A3871;
+    border: solid 0.5px #0A3871
 }
 
 .hidden {
@@ -119,6 +120,15 @@ p{
 #btnDesencriptar {
     background-color: #D8DFE8;
     color: #0A3871;
-    border: 10px;
+    border: solid 0.5px #0A3871
 }
 
+.styleAfterBnt {
+    text-align: left;
+    font-size: 24px;
+    height: 600px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

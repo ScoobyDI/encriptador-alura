@@ -12,6 +12,7 @@ const imgMunieco = document.getElementById("imgNoText");
 const titleResult = document.querySelector(".titleMsj");
 const textResult = document.querySelector("#textoMsj");
 const btnCopiar = document.querySelector("#btnCopiar");
+const contenedorResult = document.querySelector(".mensaje-Encriptador");
 
 function encriptar (mensaje){                    //Función para encriptar
     let mensajeEncriptado = "";
@@ -44,6 +45,7 @@ document.getElementById("texto").addEventListener("input", (e) => {
     textResult.textContent = "";
 
     titleResult.classList.remove("hidden");         //para otro texto
+    contenedorResult.classList.remove("styleAfterBnt");
     btnCopiar.classList.add("hidden");
 });
 
@@ -54,6 +56,8 @@ function encriptarTexto(){
     textResult.textContent = mensajeEncriptado;
     titleResult.classList.add("hidden");
     btnCopiar.classList.remove("hidden");
+
+    contenedorResult.classList.add("styleAfterBnt");
 }
 
 function desencriptarTexto(){
@@ -63,6 +67,8 @@ function desencriptarTexto(){
     textResult.textContent = mensajeDesencriptado;
     titleResult.classList.add("hidden");
     btnCopiar.classList.remove("hidden");
+
+    contenedorResult.classList.add("styleAfterBnt");
 }
 
 function copiarTexto (){
