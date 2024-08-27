@@ -75,7 +75,17 @@ function copiarTexto (){
     let textCopy=textResult.textContent;
     navigator.clipboard.writeText(textCopy).then(()=>{
         console.log(`Se copio el texto: ${textCopy}`)
+
+        Swal.fire({
+            title: '¡Texto copiado!',
+            text: 'El texto ha sido copiado al portapapeles.',
+            icon: 'success',
+            confirmButtonText: 'OK',
+            timer: 2000, // La alerta se cierra automáticamente después de 2 segundos
+            timerProgressBar: true,
+        });
     })
+    
 } 
 
 
