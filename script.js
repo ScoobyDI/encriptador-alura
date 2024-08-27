@@ -1,3 +1,4 @@
+
 const llaves = [        //creo un array que contiene otros arryas para saber q elementos van a cambiar
     ["a", "ai"],
     ["e", "enter"],
@@ -6,7 +7,7 @@ const llaves = [        //creo un array que contiene otros arryas para saber q e
     ["u", "ufat"],
 ];
 
-function encriptarMsj (mensaje){                    //Función para encriptar
+function encriptar (mensaje){                    //Función para encriptar
     let mensajeEncriptado = "";
     for (let i = 0; i < mensaje.length; i++){
         let letra = mensaje[i];
@@ -21,7 +22,7 @@ function encriptarMsj (mensaje){                    //Función para encriptar
     return mensajeEncriptado;
 };
 
-function desencriptarMsj (mensaje){                 //Función para desencriptar
+function desencriptar (mensaje){                 //Función para desencriptar
     let mensajeDesencriptado = mensaje;
     for (let i = 0; i < llaves.length; i++){                                //Va a rrecorrer todos los arryas
         let regex = new RegExp(llaves[i][1],'g');                           //
@@ -29,3 +30,17 @@ function desencriptarMsj (mensaje){                 //Función para desencriptar
     }
     return mensajeDesencriptado;
 };
+
+function encriptarTexto() {
+    const textArea = document.getElementById("texto").value;
+    console.log("Valor del textarea antes de encriptar:", textArea); // Muestra el valor antes de encriptar
+    const mensajeEncriptado = encriptar(textArea);
+    console.log("Mensaje encriptado:", mensajeEncriptado);
+}
+
+function desencriptarTexto() {
+    const textArea = document.getElementById("texto").value;
+    console.log("Valor del textarea antes de desencriptar:", textArea); // Muestra el valor antes de desencriptar
+    const mensajeDesencriptado = desencriptar(textArea);
+    console.log("Mensaje desencriptado:", mensajeDesencriptado);
+}
