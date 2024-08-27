@@ -42,6 +42,9 @@ document.getElementById("texto").addEventListener("input", (e) => {
     imgMunieco.style.display = "none";
     titleResult.textContent = "Capturando mensaje ...";
     textResult.textContent = "";
+
+    titleResult.classList.remove("hidden");         //para otro texto
+    btnCopiar.classList.add("hidden");
 });
 
 function encriptarTexto(){
@@ -59,6 +62,7 @@ function desencriptarTexto(){
     let mensajeDesencriptado = desencriptar(text);
     textResult.textContent = mensajeDesencriptado;
     titleResult.classList.add("hidden");
+    btnCopiar.classList.remove("hidden");
 }
 
 function copiarTexto (){
