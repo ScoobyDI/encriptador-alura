@@ -44,15 +44,16 @@ document.getElementById("texto").addEventListener("input", (e) => {
     textResult.textContent = "";
 });
 
-function encriptarTexto() {
+function encriptarTexto(){
     let text = textArea.value.toLowerCase();
     console.log("Valor del textarea antes de encriptar:", text); // Muestra el valor antes de encriptar
     let mensajeEncriptado = encriptar(text);
     textResult.textContent = mensajeEncriptado;
     titleResult.classList.add("hidden");
+    btnCopiar.classList.remove("hidden");
 }
 
-function desencriptarTexto() {
+function desencriptarTexto(){
     let text = textArea.value.toLowerCase();
     console.log("Valor del textarea antes de desencriptar:", text); // Muestra el valor antes de desencriptar
     let mensajeDesencriptado = desencriptar(text);
@@ -60,7 +61,12 @@ function desencriptarTexto() {
     titleResult.classList.add("hidden");
 }
 
-
+function copiarTexto (){
+    let textCopy=textResult.textContent;
+    navigator.clipboard.writeText(textCopy).then(()=>{
+        console.log(`Se copio el texto: ${textCopy}`)
+    })
+} 
 
 
 
