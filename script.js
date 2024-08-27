@@ -7,20 +7,10 @@ const llaves = [        //creo un array que contiene otros arryas para saber q e
     ["u", "ufat"],
 ]
 
-
-function encriptarTexto() {
-    const textArea = document.getElementById("texto").value;
-    console.log("Valor del textarea antes de encriptar:", textArea); // Muestra el valor antes de encriptar
-    const mensajeEncriptado = encriptar(textArea);
-    console.log("Mensaje encriptado:", mensajeEncriptado);
-}
-
-function desencriptarTexto() {
-    const textArea = document.getElementById("texto").value;
-    console.log("Valor del textarea antes de desencriptar:", textArea); // Muestra el valor antes de desencriptar
-    const mensajeDesencriptado = desencriptar(textArea);
-    console.log("Mensaje desencriptado:", mensajeDesencriptado);
-}
+const textArea = document.getElementById("texto");
+const imgMunieco = document.getElementById("imgNoText");
+const titleResult = document.querySelector(".titleMsj");
+const textResult = document.querySelector("#textoMsj");
 
 function encriptar (mensaje){                    //Función para encriptar
     let mensajeEncriptado = "";
@@ -46,32 +36,29 @@ function desencriptar (mensaje){                 //Función para desencriptar
     return mensajeDesencriptado;
 };
 
+document.getElementById("texto").addEventListener("input", (e) => {
+    console.log(e.target.value);
+    imgMunieco.style.display = "none";
+    titleResult.textContent = "Capturando mensaje ...";
+    textResult.textContent = "";
+});
+
+function encriptarTexto() {
+    const text = textArea.value;
+    console.log("Valor del textarea antes de encriptar:", text); // Muestra el valor antes de encriptar
+    const mensajeEncriptado = encriptar(text);
+    console.log("Mensaje encriptado:", mensajeEncriptado);
+}
+
+function desencriptarTexto() {
+    const text = textArea.value;
+    console.log("Valor del textarea antes de desencriptar:", text); // Muestra el valor antes de desencriptar
+    const mensajeDesencriptado = desencriptar(text);
+    console.log("Mensaje desencriptado:", mensajeDesencriptado);
+}
 
 
 
 
 
 
-
-
-
-
-
-
-// Otras opciones:
-// function encriptarMsj (mensaje){                    //Función para encriptar
-//     mensaje=document.getElementById("texto").value;    //traigo el valor del textarea
-//     let mensajeEncriptado = "";
-//     for (let i = 0; i < mensaje.length; i++){
-//         let letra = mensaje[i];
-//         let encriptada = letra;
-//         for (let j = 0; j < llaves.length; j++){
-//             if (letra === llaves[j][0]){            //si es igual a una letra del indice 0 del array llaves
-//                 encriptada = llaves[j][1];          //lo va a cambiar por su indice 1 del array
-//             }
-//         }
-//         mensajeEncriptado += encriptada;
-//     }
-//     console.log("Valor del textarea antes de encriptar:", mensaje); // Muestra el valor antes de encriptar
-//     console.log("Mensaje encriptado:", mensajeEncriptado);
-// };
